@@ -17,9 +17,7 @@ for data in puzzle_input_list:
         pp_char = str(data[data.find(' ') + 1 : data.find(':')])
         pp_pass = str(data[data.find(':') + 2 : ])
         try:
-            if pp_pass[pp_number_low-1] ==  pp_char and pp_pass[pp_number_high-1] !=  pp_char:
-                solution_counter += 1
-            elif pp_pass[pp_number_low-1] !=  pp_char and pp_pass[pp_number_high-1] ==  pp_char:
+            if (pp_pass[pp_number_low-1] == pp_char) != (pp_pass[pp_number_high-1] ==  pp_char):
                 solution_counter += 1
             else:
                 pass
